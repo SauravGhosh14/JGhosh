@@ -15,7 +15,7 @@
 //})
 
 $(document).ready(function(){
-var $form = $('form#jghoshhealthchart'),
+var $form = $('form#form'),
     url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
 
 $('#submit-form').on('click', function(e) {
@@ -26,6 +26,7 @@ $('#submit-form').on('click', function(e) {
     dataType: "json",
     data: $form.serializeObject()
   }).success(
+      alert('Hello');
     // do something
   );
 })
