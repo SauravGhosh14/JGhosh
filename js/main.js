@@ -58,7 +58,7 @@
 //});
 
 $(document).ready(function(){
-    console.log('123');
+    console.log('abc');
    // Variable to hold request
 var request;
 
