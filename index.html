@@ -7,7 +7,6 @@
       
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>      
-    <script src="js/main.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -52,6 +51,29 @@
     <script src="js/routes.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/main.js"></script>  
+      <script>
+      $(document).ready(function(){
+    console.log('123');
+    var form = $('form');
+    var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
+    
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(function(response) {
+      alert('Hello');
+		}
+  );
+})
+});
+      </script>
+      
 
     <!-- Only required for Tab projects w/ pages in multiple tabs 
     <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
