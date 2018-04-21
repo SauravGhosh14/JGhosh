@@ -53,28 +53,28 @@
     <script src="js/services.js"></script>
     <script src="js/main.js"></script>  
       <script>
-//      $(document).ready(function(){
-//    console.log('123');
-//          
-//    var form = $('form');
-//    var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
-//    
-//
-//$('#submit-form').on('click', function(e) {
-//  e.preventDefault();
-//  var jqxhr = $.ajax({
-//    url: url,
-//    method: "GET",
-//    dataType: "json",
-//    data: $form.serializeObject()
-//  }).success(function(response) {
-//      alert('Hello');
-//		}
-//  );
-//})
-//});
+      $(document).ready(function(){
+    console.log('890');
           
-          $(document).ready(function(){
+    var form = $('form');
+    var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
+    
+
+$('#submit').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(function(response) {
+      alert('Hello');
+		}
+  );
+})
+});
+          
+$(document).ready(function(){
     console.log('123');
    // Variable to hold request
 var request;
