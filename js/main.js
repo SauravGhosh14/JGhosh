@@ -15,6 +15,7 @@
 //})
 
 $(document).ready(function(){
+    console.log('123');
     var form = $('form');
     var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
     
