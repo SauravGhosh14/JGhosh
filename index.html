@@ -6,7 +6,8 @@
     <title>J Ghosh Health Chart</title>
       
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>      
+<!--    <script src="js/jquery-1.11.0.min.js"></script>-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -51,89 +52,138 @@
     <script src="js/routes.js"></script>
     <script src="js/directives.js"></script>
     <script src="js/services.js"></script>
-    <script src="js/main.js"></script>  
       <script>
-      $(document).ready(function(){
-    console.log('890');
-          
-    var form = $('form');
-    var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec';
-    
+        //          $(document).ready(function(){
+        //    $("#form").submit(function(event){
+        //        event.preventDefault();
+        //        console.log("SUBMIT");//
+        //    });
+        //});
 
-$('#submit').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(function(response) {
-      alert('Hello');
-		}
-  );
-})
-});
-          
-$(document).ready(function(){
-    console.log('123');
-   // Variable to hold request
-var request;
+        //             $(document).ready(function(){
+        //                 console.log('New');                        
+        //                $('#submit').click(function() {
+        //                    console.log('On Click');//
+        //    }); 
+        //             });  
 
-// Bind to the submit event of our form
-$("#form").submit(function(event){
 
-    // Prevent default posting of form - put here to work in case of errors
-    event.preventDefault();
+        //      $(document).ready(function(){
+        //          
+        //          
+        //          
+        //          
+        //          
+        //          //MAIN and WORKING
+        //    console.log('890');
+        //          
+        //          var $form = $('form#form')
+        //    //var form = $('#form');
+        //    var url = 'https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec?start=1325437200&end=1325439000&prefix=alert&callback=?';
+        //     var serializedData = $form.serialize(); console.log(serializedData);
+        //
+        //$('#submit').click(function(e) {
+        //    console.log('onClick');
+        //  e.preventDefault();
+        //  var xhr = $.post({
+        //    url: url,
+        //      crossDomain: true,
+        //    type: "POST",
+        //        dataType: "jsonp", // expected format for response
+        //  contentType: "application/x-www-form-urlencoded", // send as JSON
+        //  }).done(function(response) {
+        //      console.log('Hello');
+        //		}).fail(function(xhr, textStatus, errorThrown){
+        //      console.log(xhr + ' ' + textStatus + ' ' + errorThrown);
+        //  });
+        //})
+        //});
 
-    // Abort any pending request
-    if (request) {
-        request.abort();
-    }
-    // setup some local variables
-    var $form = $(this);
+        //                $(document).ready(function(){
+        //    console.log('New One');
+        //    var url = "https://script.google.com/macros/s/123/exec?callback=ctrlq&name=";
+        //    var name = "Amit Agarwal"
+        //
+        //    var request = $.ajax({
+        //      crossDomain: true,
+        //      url: url + encodeURIComponent(name),
+        //      type: "get",
+        //      dataType: "json"
+        //    });
+        //});
 
-    // Let's select and cache all the fields
-    //var $inputs = $form.find("input, select, button, textarea");
+        //$(document).ready(function(){
+        //    console.log('123');
+        //   // Variable to hold request
+        //var request;
+        //
+        //// Bind to the submit event of our form
+        //$("#form").submit(function(event){
+        //
+        //    // Prevent default posting of form - put here to work in case of errors
+        //    event.preventDefault();
+        //
+        //    // Abort any pending request
+        //    if (request) {
+        //        request.abort();
+        //    }
+        //    // setup some local variables
+        //    var $form = $(this);
+        //
+        //    // Let's select and cache all the fields
+        //    //var $inputs = $form.find("input, select, button, textarea");
+        //
+        //    // Serialize the data in the form
+        //    var serializedData = $form.serialize();
+        //
+        //    // Let's disable the inputs for the duration of the Ajax request.
+        //    // Note: we disable elements AFTER the form data has been serialized.
+        //    // Disabled form elements will not be serialized.
+        //    //$inputs.prop("disabled", true);
+        //
+        //    // Fire off the request to /form.php
+        //    request = $.ajax({
+        //        url: "https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec",
+        //        method: "GET",
+        //        data: serializedData
+        //    });
+        //
+        //    // Callback handler that will be called on success
+        //    request.done(function (response, textStatus, jqXHR){
+        //        // Log a message to the console
+        //        console.log("Hooray, it worked!");
+        //    });
+        //
+        //    // Callback handler that will be called on failure
+        //    request.fail(function (jqXHR, textStatus, errorThrown){
+        //        // Log the error to the console
+        //        console.error(
+        //            "The following error occurred: "+
+        //            textStatus, errorThrown
+        //        );
+        //    });
+        //
+        //    // Callback handler that will be called regardless
+        //    // if the request failed or succeeded
+        //    request.always(function () {
+        //        // Reenable the inputs
+        //        //$inputs.prop("disabled", false);
+        //    });
+        //
+        //}); 
+        //});    
+        $(document).ready(function() {
+          $('#gform').submit(function(e) {
 
-    // Serialize the data in the form
-    var serializedData = $form.serialize();
+            // Prevent form submission which refreshes page
+            e.preventDefault();
 
-    // Let's disable the inputs for the duration of the Ajax request.
-    // Note: we disable elements AFTER the form data has been serialized.
-    // Disabled form elements will not be serialized.
-    //$inputs.prop("disabled", true);
-
-    // Fire off the request to /form.php
-    request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec",
-        method: "GET",
-        data: serializedData
-    });
-
-    // Callback handler that will be called on success
-    request.done(function (response, textStatus, jqXHR){
-        // Log a message to the console
-        console.log("Hooray, it worked!");
-    });
-
-    // Callback handler that will be called on failure
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        // Log the error to the console
-        console.error(
-            "The following error occurred: "+
-            textStatus, errorThrown
-        );
-    });
-
-    // Callback handler that will be called regardless
-    // if the request failed or succeeded
-    request.always(function () {
-        // Reenable the inputs
-        //$inputs.prop("disabled", false);
-    });
-
-}); 
-});
+            // Serialize data
+            var formData = $(this).serialize();
+            console.log(formData);
+            handleFormSubmit(event);
+          })
+        });
       </script>
       
 
@@ -152,4 +202,9 @@ $("#form").submit(function(event){
   </div>
 </div>
   </body>
+<script src="js/main.js"></script>    
+<!--
+    <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
+-->
 </html>

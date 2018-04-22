@@ -1,57 +1,81 @@
 <ion-view title="J Ghosh Health Chart" id="mainPage" style="background-color:#FFFFFF;">
   <ion-content padding="true" class="has-header">
-      <form id="form" class="list">
+            <form id="gform" method="POST" class="list" action="https://script.google.com/macros/s/AKfycbzVGSMo2EFvvWaEfArX1bQBmLk4vawVNQzB_9F6yN6qet1KyAY9/exec">
+    <!-- change the form action to your script url -->
           <h3 id="heading1" style="color:#000000;font-weight:400;text-align:center;">Pulse</h3>
       <label class="item item-input" id="pulse" name="Pulse">
         <span class="input-label">Pulse</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="Pulse">
       </label>
           <h3 id="heading2" style="color:#000000;font-weight:400;text-align:center;">Saturation</h3>
       <label class="item item-input" id="saturation" name="Saturation">
         <span class="input-label">Saturation</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="Saturation">
       </label>
       <h3 id="heading3" style="color:#000000;font-weight:400;text-align:center;">Blood Pressure</h3>
       <label class="item item-input" id="Systolic" name="Systolic">
         <span class="input-label">Systolic</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="BP/S">
       </label>
       <label class="item item-input" id="Diastolic" name="Diastolic">
         <span class="input-label">Diastolic</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="BP/D">
       </label>
+      <h3 id="heading4" style="color:#000000;font-weight:400;text-align:center;">Sugar</h3>
+      <label class="item item-input" id="sugar" name="Sugar Fasting">
+        <span class="input-label">Sugar Fasting</span>
+        <input type="number" placeholder="" name="Sugar Fasting">
+      </label>
+      <label class="item item-input" id="sugaPP" name="Sugar PP">
+        <span class="input-label">Sugar PP</span>
+        <input type="number" placeholder="" name="Sugar PP">
+      </label>
+<!--
+                
           <h3 id="heading4" style="color:#000000;font-weight:400;text-align:center;">Sugar</h3>
       <label class="item item-input" id="sugar" name="Sugar">
         <span class="input-label">Sugar</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="Sugar">
       </label>
+-->
+                
           <h3 id="heading5" style="color:#000000;font-weight:400;text-align:center;">Weight</h3>
       <label class="item item-input" id="weight" name="Weight">
         <span class="input-label">Weight</span>
-        <input type="number" placeholder="">
+        <input type="number" placeholder="" name="Weight">
       </label>
           <h3 id="heading6" style="color:#000000;font-weight:400;text-align:center;">O2</h3>
       <label class="item item-input" id="startTimeO2" name="startTimeO2">
         <span class="input-label">Start Time</span>
-        <input type="time" placeholder="">
+        <input type="time" placeholder="" name="O2 Start">
       </label>
       <label class="item item-input" id="endTimeO2" name="endTmeO2">
         <span class="input-label">End Time</span>
-        <input type="time" placeholder="">
+        <input type="time" placeholder="" name="O2 End">
       </label>
           <h3 id="heading7" style="color:#000000;font-weight:400;text-align:center;">NIV</h3>
       <label class="item item-input" id="startTimeNIV" name="startTimeNIV">
         <span class="input-label">Start Time</span>
-        <input type="time" placeholder="">
+        <input type="time" placeholder="" name="NIV Start">
       </label>
       <label class="item item-input" id="endTimeNIV" name="endTmeNIV">
         <span class="input-label">End Time</span>
-        <input type="time" placeholder="">
+        <input type="time" placeholder="" name="NIV End">
       </label>
-          <h3 id="heading8" style="color:#000000;font-weight:400;text-align:center;">Heading</h3>
+          <h3 id="heading8" style="color:#000000;font-weight:400;text-align:center;">Comments</h3>
       <label class="item item-input" id="comments" name="Comments">
-        <span class="input-label">Comments</span><textarea placeholder=""></textarea></label>
-          <button id="submit" type="submit" style="font-weight:500;" class="button button-positive button-block">SUBMIT</button>          
+        <span class="input-label">Comments</span>
+          <textarea placeholder="" name="Comments"></textarea>
+      </label>
+          <br><br>
+<!--            <input type="submit" id ="SUBMIT" value="Submit">-->
+          <button id="submit" style="font-weight:500;" class="button button-positive button-block">SUBMIT</button>
+<!--        <button class="button">Send</button>-->
     </form>
+      
+        <div style="display:none;" id="message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
   </ion-content>
 </ion-view>
