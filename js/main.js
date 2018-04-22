@@ -200,7 +200,8 @@ function getFormData() {
 }
 
 function handleFormSubmit(event) { // handles form submit withtout any jquery
-  //console.log(event);
+  showLoading();
+  console.log(event);
   event.preventDefault(); // we are submitting via xhr below
   var data = getFormData(); // get the values submitted in the form
   console.log(data);
@@ -215,8 +216,15 @@ function handleFormSubmit(event) { // handles form submit withtout any jquery
   // xhr.withCredentials = true;
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhr.onreadystatechange = function() {
-    console.log(xhr.status, xhr.statusText);
-    console.log(xhr.responseText);
+
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      hideLoading();
+      console.log(xhr);
+      showAlert();
+      document.getElementById("gform").reset();
+      scrollTop();
+    }
+
     //document.getElementById("gform").style.display = "none"; // hide form
     //var thankYouMessage = document.getElementById("message");
     //if (thankYouMessage) {
