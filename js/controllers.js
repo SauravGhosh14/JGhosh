@@ -38,6 +38,7 @@ function ($scope, $stateParams) {
     hideLoading = $scope.hideLoading;
     
     $scope.doRefresh = function() {    
+        document.getElementById("gform").reset();
         $scope.$broadcast('scroll.refreshComplete');
     };  
 })
